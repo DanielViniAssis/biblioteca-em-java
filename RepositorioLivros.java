@@ -4,6 +4,7 @@ import java.util.List;
 public class RepositorioLivros {
     private static List<Livro> livros = new ArrayList<>();
 
+    // Cadastro
     public static void cadastrarLivro(Livro livro){
         for (Livro livroExistente : livros){
             if (livroExistente.getTitulo().equals(livro.getTitulo())){
@@ -15,6 +16,7 @@ public class RepositorioLivros {
         System.out.println("Livro cadastrado!");
     }
 
+    // listagem
     public static void listarLivros(){
         if (livros.isEmpty()){
             System.out.println("Não há nenhum livro cadastrado!");
@@ -44,7 +46,7 @@ public class RepositorioLivros {
         }
         System.out.println("Livro não encontrado!");
     }
-
+    // Devolução
     public static void devolverLivro(String titulo){
         for (Livro livro : livros){
             if (livro.getTitulo().equals(titulo)){

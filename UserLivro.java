@@ -21,5 +21,6 @@ public class UserLivro{
         // salvamento no repositorio
         RepositorioLivros.cadastrarLivro(livro);
 
+        scanner.close();
     }
 }
