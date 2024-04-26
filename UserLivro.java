@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class UserLivro{
-    public static void cadastrarLivro(String[] args){
+    public static void UserCadastra(RepositorioLivros repositorio){
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Digite o Titulo do livro: ");
@@ -16,14 +16,10 @@ public class UserLivro{
         System.out.println("Digite o Ano de lançamento do livro: ");
         int anoDeLancamento = scanner.nextInt();
         
-
         Livro livro = new Livro(titulo, autor, paginas, anoDeLancamento);
 
-        System.out.println("\nTítulo: " + livro.getTitulo());
-        System.out.println("Autor: " + livro.getAutor());
-        System.out.println("Paginas: " + livro.getPaginas());
-        System.out.println("Ano de Publicação: " + livro.getAnoDeLancamento());
+        // salvamento no repositorio
+        RepositorioLivros.cadastrarLivro(livro);
 
-        scanner.close();
     }
 }
